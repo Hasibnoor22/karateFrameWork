@@ -37,12 +37,35 @@ public class DataGenerator {
 	}
 	
 	
+	
 	public static String getTitle() {
+
 		Faker faker = new Faker();
-		String title = faker.name().title().toUpperCase();
+		String title = faker.name().prefix().toUpperCase();
 		return title;
+
+	}
+
+	public static String getGender() {
+
+		Faker faker = new Faker();
+		String gender = faker.dog().gender().toUpperCase();
+		return gender;
+
+	}
+
+	public static String getJob() {
+		Faker faker = new Faker();
+		String job = faker.job().position();
+		return job;
+
 	}
 	
+	public static String getMaritalstatus() {
+	    Faker faker = new Faker();
+	    String maritalStatus = faker.demographic() .maritalStatus() .toUpperCase();
+	    return maritalStatus;
+	    }
 
 
 }
