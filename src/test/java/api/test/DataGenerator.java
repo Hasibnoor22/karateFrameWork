@@ -1,6 +1,8 @@
 package api.test;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import com.github.javafaker.Faker;
 
@@ -62,9 +64,17 @@ public class DataGenerator {
 	}
 	
 	public static String getMaritalstatus() {
-	    Faker faker = new Faker();
-	    String maritalStatus = faker.demographic() .maritalStatus() .toUpperCase();
-	    return maritalStatus;
+		
+		ArrayList<String>maritalSatus = new ArrayList<String>();
+		maritalSatus.add("SINGLE");
+		maritalSatus.add("MARRIED");
+		maritalSatus.add("DIVORCED");
+		maritalSatus.add("WIDOW");
+		maritalSatus.add("WIDOWER");
+		
+		Collections.shuffle(maritalSatus);
+
+	    return maritalSatus.get(0);
 	    }
 
 

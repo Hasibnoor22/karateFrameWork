@@ -91,12 +91,12 @@ public class DatabaseConnectionUtility {
 	}
 
 	public static String result(String query, String col) {
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//		try {
+//			//Thread.sleep(2000);
+//		} catch (InterruptedException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 		List<Map<String, Object>> result = convertResultToMap(query);
 		String resultData = result.get(0).get(col).toString();
 		System.out.println(resultData + "=========================================");

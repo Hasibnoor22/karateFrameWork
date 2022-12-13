@@ -8,7 +8,7 @@ Feature: Add a car request
     * def token = call read("GenerateToken.feature")
     * def tokenValue = token.response.token
     * header Authorization = "Bearer " + tokenValue
-    * def postRequest = call read("PostRequestTest.feature")
+    * def postRequest = callonce read("EndToEnd.feature")
     * def idValue = postRequest.response.id
     * param primaryPersonId = idValue
     * path "api/accounts/add-account-car"
@@ -24,4 +24,11 @@ Feature: Add a car request
       """
       * method post
       * print response
+      
+      
+      
+      
+      
+      
+      
       
